@@ -13,14 +13,12 @@ import (
 )
 
 func DBinstance() *mongo.Client {
-	err := godotenv.Load(".env")
+// 	err := godotenv.Load(".env")
 
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-	//MongoDb := "mongodb+srv://yogesh02:Devil1234@cluster0.euqff.mongodb.net/?retryWrites=true&w=majority"
-
-	//MongoDb:=os.Getenv("MONGODB_URL")
+// 	if err != nil {
+// 		log.Fatal("Error loading .env file")
+// 	}
+	
 	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://yogesh02:1234@cluster0.xu1dpbn.mongodb.net/?retryWrites=true&w=majority")) //connecting
 	if err != nil {
 		log.Fatal(err)
